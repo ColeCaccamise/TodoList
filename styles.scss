@@ -1,0 +1,137 @@
+@import '_config';
+
+@font-face {
+    font-family: "CircularStd-bold";
+    src: url(../assets/CircularStd-Black.ttf);
+  }
+
+  @font-face {
+    font-family: "CircularStd";
+    src: url(../assets/CircularStd-Medium.ttf);
+  }
+
+  .banner {
+      background-color: black;
+      color: white;
+      width: 100%;
+      text-align: center;
+
+      p {
+          color: white;
+      }
+  }
+
+  .exit {
+      display: none;
+      
+  }
+
+  body {
+      font-family: 'CircularStd';
+
+      .bold {
+          font-family: 'CircularStd-bold ';
+      }
+  }
+
+  p {
+      color: grey;
+  }
+
+.container {
+    width: 90%;
+}
+
+.header {
+    h1 {
+        font-size: 28px;
+        margin-top: 1rem;
+    }
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    text-align: center;
+    border-radius: 2rem;
+    line-height: 2rem;
+    width: 12rem;
+    transition: 0.3s all ease-in-out;
+  
+    &:hover {
+        transform: scale(1.015);
+        color: white;
+        background-color: grey;
+    }
+}
+
+.jumbo {
+    background-color: $grey-color;
+    padding: 2rem;
+    text-align: center;
+    max-width: 420px;
+    margin: 2rem auto;
+
+    .add {
+        margin: 1rem;
+    }
+
+    label {
+        display: block;
+    }
+
+    .btn {
+        margin: auto;
+        margin-top: 1rem;
+        width: 100px;
+        display: block;
+    }
+}
+
+.todoUI {
+    background-color: #E9ECEF;
+    max-width: 350px;
+    height: 60px;
+    padding: 2rem;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i {
+        cursor: pointer;
+    }
+}
+
+.todosOutput {
+    border: 3px solid $grey-color;
+    max-height: 350px;
+    overflow-y: auto;
+    max-width: 420px;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    p {
+        text-align: center;
+        margin: auto;
+    }
+}
+
+.filtered {
+    display: none !important;
+  }
+
+.footer {
+    text-align: center;
+    
+    a {
+        color: black;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
