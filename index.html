@@ -19,7 +19,6 @@
   </head>
   <body>
     <!-- testing git push -->
-
     <div class="container">
       <div class="header">
         <h1><i class="fas fa-list-ul"></i> Todo List!</h1>
@@ -31,7 +30,8 @@
         <h2>Keep Track Of Your Tasks!</h2>
         <form class="add">
           <label>Add a task</label>
-          <input type="text" name="add" placeholder="" />
+          <input type="text" class="addInput" name="add" placeholder="" />
+          <p class="errorMsg hide">*no empty todos!</p>
 
           <button class="btn">Submit</button>
         </form>
@@ -50,20 +50,18 @@
       </div>
 
       <div class="todosOutput">
-        <!-- <p>No todos yet.</p> -->
+        <p class="">No todos yet.</p>
+        <p class="result hide">no search results..</p>
         <ul class="todos"></ul>
       </div>
 
       <footer class="footer">
-        <p>
-          Copyright &copy; 2020
-          <a class="link" href="https://colecaccamise.com" target="_blank"
-            >Cole Caccamise</a
-          >
+        <p class="copyright">
+          Copyright © <span id="year"></span>
+          <a href="#about" class="designed">Cole Caccamise </a>
         </p>
       </footer>
     </div>
-
-    <script src="js/main.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

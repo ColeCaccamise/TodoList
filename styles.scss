@@ -1,137 +1,187 @@
-@import '_config';
+@import "_config";
 
 @font-face {
-    font-family: "CircularStd-bold";
-    src: url(../assets/CircularStd-Black.ttf);
-  }
+  font-family: "CircularStd-bold";
+  src: url(../assets/CircularStd-Black.ttf);
+}
 
-  @font-face {
-    font-family: "CircularStd";
-    src: url(../assets/CircularStd-Medium.ttf);
-  }
+@font-face {
+  font-family: "CircularStd";
+  src: url(../assets/CircularStd-Medium.ttf);
+}
 
-  .banner {
-      background-color: black;
-      color: white;
-      width: 100%;
-      text-align: center;
-
-      p {
-          color: white;
-      }
-  }
-
-  .exit {
-      display: none;
-      
-  }
-
-  body {
-      font-family: 'CircularStd';
-
-      .bold {
-          font-family: 'CircularStd-bold ';
-      }
-  }
+.banner {
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
 
   p {
-      color: grey;
+    color: white;
   }
+}
+
+.exit {
+  display: none;
+}
+
+body {
+  font-family: "CircularStd";
+
+  .bold {
+    font-family: "CircularStd-bold ";
+  }
+}
+
+p {
+  color: grey;
+}
 
 .container {
-    width: 90%;
+  width: 90%;
 }
 
 .header {
-    h1 {
-        font-size: 28px;
-        margin-top: 1rem;
-    }
+  h1 {
+    font-size: 15px;
+    margin-top: 1rem;
+  }
 }
 
 .btn {
-    background-color: black;
+  background-color: black;
+  color: white;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  text-align: center;
+  border-radius: 2rem;
+  line-height: 2rem;
+  width: 12rem;
+  transition: 0.3s all ease-in-out;
+
+  &:hover {
+    transform: scale(1.015);
     color: white;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
-    display: inline-block;
-    text-align: center;
-    border-radius: 2rem;
-    line-height: 2rem;
-    width: 12rem;
-    transition: 0.3s all ease-in-out;
-  
-    &:hover {
-        transform: scale(1.015);
-        color: white;
-        background-color: grey;
-    }
+    background-color: grey;
+  }
 }
 
 .jumbo {
-    background-color: $grey-color;
-    padding: 2rem;
-    text-align: center;
-    max-width: 420px;
-    margin: 2rem auto;
+  background-color: $grey-color;
+  padding: 2rem;
+  text-align: center;
+  max-width: 420px;
+  margin: 2rem auto;
 
-    .add {
-        margin: 1rem;
-    }
+  .add {
+    margin: 1rem;
+  }
 
-    label {
-        display: block;
-    }
+  label {
+    display: block;
+  }
 
-    .btn {
-        margin: auto;
-        margin-top: 1rem;
-        width: 100px;
-        display: block;
-    }
+  .btn {
+    margin: auto;
+    margin-top: 1rem;
+    width: 100px;
+    display: block;
+  }
 }
 
 .todoUI {
-    background-color: #E9ECEF;
-    max-width: 350px;
-    height: 60px;
-    padding: 2rem;
-    margin: 1rem auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    i {
-        cursor: pointer;
-    }
+  background-color: #e9ecef;
+  max-width: 350px;
+  height: 60px;
+  padding: 2rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  i {
+    cursor: pointer;
+  }
 }
 
 .todosOutput {
-    border: 3px solid $grey-color;
-    max-height: 350px;
-    overflow-y: auto;
-    max-width: 420px;
-    margin: auto;
-    margin-bottom: 1rem;
-    padding: 1rem;
+  border: 3px solid $grey-color;
+  max-height: 350px;
+  overflow-y: auto;
+  max-width: 420px;
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
 
-    p {
-        text-align: center;
-        margin: auto;
-    }
+  p {
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.cbx {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-bottom: 2px;
 }
 
 .filtered {
-    display: none !important;
-  }
+  display: none !important;
+}
 
 .footer {
-    text-align: center;
-    
-    a {
-        color: black;
-    }
+  text-align: center;
+
+  a {
+    color: black;
+  }
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.errorMsg {
+  color: red;
+}
+
+.redBtn {
+  background-color: red;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
