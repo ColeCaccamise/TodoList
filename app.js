@@ -49,7 +49,8 @@ addForm.addEventListener("submit", (e) => {
 // complete todo
 list.addEventListener("click", (e) => {
   if (e.target.classList.contains("cbx")) {
-    let span = document.querySelector(".complete");
+    let current = e.target;
+    let span = current.nextElementSibling.nextElementSibling;
     span.classList.toggle("line-through");
   }
 });
